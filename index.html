@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fórmula 1 - Velocidade e Emoção</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Fórmula 1 - Velocidade e Emoção</h1>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#noticias">Notícias</a></li>
+        <li><a href="#pilotos">Pilotos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio">
+      <h2>Bem-vindo ao mundo da Fórmula 1!</h2>
+      <p>Acompanhe as últimas notícias, conheça os pilotos e fique por dentro de tudo sobre a temporada atual.</p>
+      <div class="slider">
+        <img src="./img/img1.jpg" alt="Corrida 1" class="slide active">
+        <img src="./img/img2.jpg" alt="Corrida 2" class="slide">
+        <img src="./img/img3.jpg" alt="Corrida 3 " class="slide">
+        <img src="./img/img4.jpg" alt="Corrida 4 " class="slide">
+        <img src="./img/img5.jpg" alt="Corrida 5" class="slide ">
+        <img src="./img/img6.jpg" alt="Corrida 6" class="slide">
+        <img src="./img/img7.jpg" alt="Corrida 7" class="slide">
+        <img src="./img/img8.jpg" alt="Corrida 8" class="slide ">
+        <img src="./img/img9.jpg" alt="Corrida 9" class="slide">
+        <img src="./img/img10.jpg" alt="Corrida 10" class="slide">
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+      </div>
+    </section>
+
+    <section id="noticias">
+      <h2>Últimas Notícias</h2>
+      <article>
+        <h3>Grande Prêmio de Mônaco</h3>
+        <p>Veja como foi a corrida mais glamourosa do calendário da F1.</p>
+      </article>
+      <article>
+        <h3>Novo regulamento de 2025</h3>
+        <p>Entenda as mudanças e como isso impactará as equipes.</p>
+      </article>
+      <article>
+        <h3>Grande Prêmio de Mônaco</h3>
+        <p>Veja como foi a corrida mais glamourosa do calendário da F1.</p>
+      </article>
+      <article>
+        <h3>Novo regulamento de 2025</h3>
+        <p>Entenda as mudanças e como isso impactará as equipes.</p>
+      </article>
+      <article>
+        <h3>Grande Prêmio de Mônaco</h3>
+        <p>Veja como foi a corrida mais glamourosa do calendário da F1.</p>
+      </article>
+      <article>
+        <h3>Novo regulamento de 2025</h3>
+        <p>Entenda as mudanças e como isso impactará as equipes.</p>
+      </article>
+    </section>
+
+    <section id="pilotos">
+      <h2>Pilotos em Destaque</h2>
+      <input type="text" id="buscaPiloto" placeholder="Buscar piloto...">
+      <div id="listaPilotos">
+        <div class="piloto">
+          <img src="./img/leclerc.jpg" alt="Charles Leclerc">
+          <h3>Charles Leclerc</h3>
+          <p>Charles Leclerc (nascido em 1997, em Mônaco) corre pela Ferrari e é considerado uma das maiores promessas da F1. Começou sua trajetória nas categorias de base, se destacando no karting e subindo rapidamente para a GP3, onde foi campeão em 2016. Em 2018, fez sua estreia na F1 com a Sauber (atualmente Alfa Romeo Racing) e, no ano seguinte, foi promovido à Ferrari. Em 2019, Leclerc teve um impacto imediato, vencendo duas corridas e mostrando habilidades excepcionais. Apesar de ainda não ter conquistado o título mundial, Leclerc é uma figura chave na Ferrari e é visto como um dos principais pilotos da nova geração, com grande potencial para brigar por campeonatos no futuro.</p>
+        </div>
+        <div class="piloto">
+          <img src="./img/verstappen.jpg" alt="Max Verstappen">
+          <h3>Max Verstappen</h3>
+          <p>Max Verstappen (nascido em 1997, na Bélgica) é piloto da Red Bull Racing e um dos grandes talentos da F1. Filho do ex-piloto Jos Verstappen, Max iniciou sua carreira no karting e, aos 17 anos, fez sua estreia na F1 em 2015 com a Toro Rosso (hoje AlphaTauri), tornando-se o piloto mais jovem da história da categoria. Em 2016, foi promovido à Red Bull Racing e venceu sua primeira corrida no GP da Espanha, aos 18 anos, tornando-se o vencedor mais jovem de uma corrida de F1. Com uma condução agressiva e habilidade técnica impressionante, Verstappen conquistou seu primeiro título mundial em 2021, após uma temporada histórica marcada pela intensa rivalidade com Lewis Hamilton..</p>
+        </div>
+        <div class="piloto">
+          <img src="./img/hamilton.jpg" alt="Lewis Hamilton">
+          <h3>Lewis Hamilton</h3>
+          <p>Lewis Hamilton (nascido em 1985, em Stevenage, Inglaterra) é amplamente considerado um dos maiores pilotos da história da Fórmula 1. Após se destacar no karting, Hamilton fez sua estreia na F1 em 2007 com a McLaren, quase conquistando o título em seu ano de estreia. Em 2008, conquistou seu primeiro campeonato mundial, tornando-se o campeão mais jovem da história da F1 até então. Em 2013, se transferiu para a Mercedes, onde iniciou uma era de domínio, conquistando 7 títulos mundiais, empatando com Michael Schumacher no recorde de campeonatos. Além de seu sucesso nas pistas, Hamilton é um ativista social e político, conhecido por seu trabalho em prol da igualdade racial, direitos humanos e questões ambientais, sendo uma das figuras mais influentes do esporte fora das pistas.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato">
+      <h2>Entre em Contato</h2>
+      <form id="formContato">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+        <button type="submit">Enviar</button>
+        <p id="msgForm"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Fórmula 1 Fanpage - Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
