@@ -7,8 +7,8 @@ https://brunoob35.github.io/PFE-f1page/
 
 
 Criado por:
-Kawan cavalcante RA: 24151609-2
-Bruno Schmaiske Quoos RA: 24160048-2
+- Kawan cavalcante RA: 24151609-2
+- Bruno Schmaiske Quoos RA: 24160048-2
 
 
 Funcionalidades em JS:
