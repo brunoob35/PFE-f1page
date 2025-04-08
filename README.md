@@ -15,3 +15,6 @@ Funcionalidades em JS:
 - Carrossel de fotos no topo de site
 - Busca de pilotos
 - Envio do formulário
+
+CSS
+- Responsividade para aperelhos desktop e mobile
