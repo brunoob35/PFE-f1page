@@ -1,54 +1,106 @@
-/* Reset básico */
-* {
+   /* Reset básico */
+   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
+    margin: 0;
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f1f1f1;
-    color: #333;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    scroll-behavior: smooth;
   }
+
+  /* Dark mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+.dark-mode header,
+.dark-mode footer,
+.dark-mode form,
+.dark-mode .piloto {
+  background-color: #1e1e1e;
+  color: white;
+}
   
   header {
-    background: #e10600;
+    background: #d54646;
     color: white;
-    padding: 1rem 2rem;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    text-shadow: 0.5px 0.5pc 2px #000;
+    
   }
   
-  header h1 {
-    margin-bottom: 0.5rem;
+  h1 {
+    font-size: 3rem;
+    text-align: center;
   }
   
   nav ul {
     list-style: none;
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
   }
   
   nav a {
-    color: white;
+    color: rgb(4, 4, 4);
     text-decoration: none;
   }
   
   main {
     padding: 2rem;
   }
+
+  .centered-section {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+  }
   
   section {
     margin-bottom: 2rem;
   }
+
+#inicio h2, #inicio p {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+  #buscaPiloto {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    width: 100%;
+  }
   
   .piloto {
-    background: white;
+    background: rgb(196, 92, 92);
     padding: 1rem;
     margin: 1rem 0;
     border-radius: 10px;
     display: flex;
     align-items: center;
     gap: 1rem;
+    cursor: pointer;
+    transition: transform 0.3, box-shadow 0.3;
+  }
+
+  .piloto:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   }
   
   .piloto img {
@@ -56,6 +108,16 @@
     height: auto;
     border-radius: 50%;
   }
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
   
   form {
     background: white;
@@ -67,7 +129,7 @@
     display: block;
     margin-top: 1rem;
   }
-  
+
   form input,
   form textarea {
     width: 100%;
@@ -131,7 +193,72 @@
   .slider .next {
     right: 10px;
   }
-  
+
+  /* Botão voltar ao topo */
+#btnTopo {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #e10600;
+  color: white;
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  font-size: 1.2rem;
+  z-index: 999;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  margin: 15% auto;
+  border-radius: 10px;
+  max-width: 500px;
+  position: relative;
+  overflow-y: auto;
+}
+
+.modal-content.dark {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.modal .close {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+.dark-mode .modal-content {
+  background: #1e1e1e;
+  color: white;
+}
+
+.fechar {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
   /* Responsividade */
   @media (max-width: 768px) {
     nav ul {
@@ -144,9 +271,6 @@
     }
   }
   
-  /* Acessibilidade */
-  :focus {
-    outline: 2px dashed #e10600;
-    outline-offset: 3px;
+  .slider {
+    width: 100%;
   }
-  

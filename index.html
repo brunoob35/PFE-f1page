@@ -8,21 +8,31 @@
 </head>
 <body>
   <header>
-    <h1>Fórmula 1 - Velocidade e Emoção</h1>
-    <nav>
-      <ul>
-        <li><a href="#inicio">Início</a></li>
-        <li><a href="#noticias">Notícias</a></li>
-        <li><a href="#pilotos">Pilotos</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
+      <h1>Fórmula 1 - Velocidade e Emoção</h1>
+      <nav>
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#noticias">Notícias</a></li>
+          <li><a href="#pilotos">Pilotos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <button id="toggleTheme">Modo Escuro</button>
+
   </header>
 
   <main>
-    <section id="inicio">
+    <section id="contador" class="centered-section">
+      <h2>Próxima Corrida: Domingo, 20 de Abril, às 14:00</h2>
+      <div id="timer"></div>
+    </section>
+
+    <section id="inicio" class="centered-section">
       <h2>Bem-vindo ao mundo da Fórmula 1!</h2>
       <p>Acompanhe as últimas notícias, conheça os pilotos e fique por dentro de tudo sobre a temporada atual.</p>
+      <div class="contador">
+        <h3>Próxima corrida: <span id="contador"></span></h3>
+      </div>
       <div class="slider">
         <img src="./img/img1.jpg" alt="Corrida 1" class="slide active">
         <img src="./img/img2.jpg" alt="Corrida 2" class="slide">
@@ -39,7 +49,7 @@
       </div>
     </section>
 
-    <section id="noticias">
+    <section id="noticias" class="centered-section">
       <h2>Últimas Notícias</h2>
       <article>
         <h3>F1: Red Bull entrará no 1º treino do GP do Bahrein com dois pilotos japoneses</h3>
@@ -55,7 +65,7 @@
       <br>
       <br>
       <article>
-        <h3>Leclerc se incomoda com Ferrari e decide tomar caminho próprio em desenvolvimento/h3>
+        <h3>Leclerc se incomoda com Ferrari e decide tomar caminho próprio em desenvolvimento</h3>
         <p>A harmonia na Ferrari se perdeu após o início de maus resultados na Fórmula 1 2025. Segundo reportagem do jornal italiano Corriere dela Sera, Charles Leclerc anunciou ao chefe de equipe Frédéric Vasseur e aos engenheiros que “quer tomar um caminho próprio” dentro da equipe. O comunicado aconteceu após o sábado de classificação.
           Segundo a reportagem, Vasseur tem acatado todas as palavras do heptacampeão mundial Lewis Hamilton desde que chegou ao time, no início do ano, sobre como a SF-25 deve ser desenvolvida.</p>
       </article>
@@ -79,7 +89,7 @@
       </article>
     </section>
 
-    <section id="pilotos">
+    <section id="pilotos" class="centered-section">
       <h2>Pilotos em Destaque</h2>
       <input type="text" id="buscaPiloto" placeholder="Buscar piloto...">
       <div id="listaPilotos">
@@ -87,21 +97,24 @@
           <img src="./img/leclerc.jpg" alt="Charles Leclerc">
           <h3>Charles Leclerc</h3>
           <p>Charles Leclerc (nascido em 1997, em Mônaco) corre pela Ferrari e é considerado uma das maiores promessas da F1. Começou sua trajetória nas categorias de base, se destacando no karting e subindo rapidamente para a GP3, onde foi campeão em 2016. Em 2018, fez sua estreia na F1 com a Sauber (atualmente Alfa Romeo Racing) e, no ano seguinte, foi promovido à Ferrari. Em 2019, Leclerc teve um impacto imediato, vencendo duas corridas e mostrando habilidades excepcionais. Apesar de ainda não ter conquistado o título mundial, Leclerc é uma figura chave na Ferrari e é visto como um dos principais pilotos da nova geração, com grande potencial para brigar por campeonatos no futuro.</p>
+          <button class="verMais">Ver mais</button>
         </div>
         <div class="piloto">
           <img src="./img/verstappen.jpg" alt="Max Verstappen">
           <h3>Max Verstappen</h3>
           <p>Max Verstappen (nascido em 1997, na Bélgica) é piloto da Red Bull Racing e um dos grandes talentos da F1. Filho do ex-piloto Jos Verstappen, Max iniciou sua carreira no karting e, aos 17 anos, fez sua estreia na F1 em 2015 com a Toro Rosso (hoje AlphaTauri), tornando-se o piloto mais jovem da história da categoria. Em 2016, foi promovido à Red Bull Racing e venceu sua primeira corrida no GP da Espanha, aos 18 anos, tornando-se o vencedor mais jovem de uma corrida de F1. Com uma condução agressiva e habilidade técnica impressionante, Verstappen conquistou seu primeiro título mundial em 2021, após uma temporada histórica marcada pela intensa rivalidade com Lewis Hamilton..</p>
+          <button class="verMais">Ver mais</button>
         </div>
         <div class="piloto">
           <img src="./img/hamilton.jpg" alt="Lewis Hamilton">
           <h3>Lewis Hamilton</h3>
           <p>Lewis Hamilton (nascido em 1985, em Stevenage, Inglaterra) é amplamente considerado um dos maiores pilotos da história da Fórmula 1. Após se destacar no karting, Hamilton fez sua estreia na F1 em 2007 com a McLaren, quase conquistando o título em seu ano de estreia. Em 2008, conquistou seu primeiro campeonato mundial, tornando-se o campeão mais jovem da história da F1 até então. Em 2013, se transferiu para a Mercedes, onde iniciou uma era de domínio, conquistando 7 títulos mundiais, empatando com Michael Schumacher no recorde de campeonatos. Além de seu sucesso nas pistas, Hamilton é um ativista social e político, conhecido por seu trabalho em prol da igualdade racial, direitos humanos e questões ambientais, sendo uma das figuras mais influentes do esporte fora das pistas.</p>
+          <button class="verMais">Ver mais</button>
         </div>
       </div>
     </section>
 
-    <section id="contato">
+    <section id="contato" class="centered-section">
       <h2>Entre em Contato</h2>
       <form id="formContato">
         <label for="nome">Nome:</label>
@@ -122,6 +135,16 @@
   <footer>
     <p>&copy; 2025 Fórmula 1 Fanpage</p>
   </footer>
+
+  <button id="btnTopo">↑ Topo</button>
+
+  <!-- Modal -->
+  <div id="modalPiloto" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p id="modalInfo"></p>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

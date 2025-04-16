@@ -63,3 +63,67 @@ if (busca) {
     });
   });
 }
+
+// Modal ao clicar em piloto
+const modal = document.getElementById("modalPiloto");
+const modalNome = document.getElementById("modalNome");
+const modalDescricao = document.getElementById("modalDescricao");
+const fecharModal = document.querySelector(".fechar");
+
+pilotos.forEach((piloto) => {
+  piloto.addEventListener("click", () => {
+    modalNome.textContent = piloto.dataset.nome;
+    modalDescricao.textContent = piloto.dataset.desc;
+    modal.style.display = "block";
+  });
+});
+
+if (fecharModal) {
+  fecharModal.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) modal.style.display = "none";
+  });
+}
+
+// Botão "voltar ao topo"
+const btnTopo = document.getElementById("btnTopo");
+window.addEventListener("scroll", () => {
+  btnTopo.style.display = window.scrollY > 300 ? "block" : "none";
+});
+
+btnTopo.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+// Contador regressivo
+const dataCorrida = new Date("2025-04-20T14:00:00");
+const contadorEl = document.getElementById("contador");
+
+function atualizarContador() {
+  const agora = new Date();
+  const diferenca = dataCorrida - agora;
+
+  if (diferenca <= 0) {
+    contadorEl.textContent = "A corrida já começou!";
+    return;
+  }
+
+  const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+  const horas = Math.floor((diferenca / (1000 * 60 * 60)) % 24);
+  const minutos = Math.floor((diferenca / (1000 * 60)) % 60);
+  const segundos = Math.floor((diferenca / 1000) % 60);
+
+  contadorEl.textContent = `${dias}d ${horas}h ${minutos}m ${segundos}s`;
+}
+
+setInterval(atualizarContador, 1000);
+atualizarContador();
+
+// Dark mode toggle
+const toggleTheme = document.getElementById("toggleTheme");
+toggleTheme.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+});
